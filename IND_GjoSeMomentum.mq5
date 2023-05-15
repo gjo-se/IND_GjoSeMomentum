@@ -146,7 +146,7 @@ int OnCalculate(const int pRatesTotal,
          if(buyMomentum > InpMinMomentum) {
             if(momentumIsHigherMINMomentumBuyInSignalIsTriggert == false) {
                lineText = TimeToString(TimeCurrent(), TIME_SECONDS) + " // " + DoubleToString(buyMomentum, 2);
-               createVLine("buyDynamic" + TimeToString(TimeCurrent()), time[i], clrGreen, 1, STYLE_SOLID, lineText);
+               createVLine("buyDynamic" + TimeToString(TimeCurrent()), time[i], clrGreen, 1, STYLE_DASH, lineText);
                createArrowBuy("buyArrow" + __FUNCTION__ + TimeToString(TimeCurrent(), TIME_SECONDS));
                momentumIsHigherMINMomentumBuyInSignalIsTriggert = true;
             }
@@ -176,7 +176,7 @@ int OnCalculate(const int pRatesTotal,
          if(sellMomentum < InpMinMomentum * -1) {
             if(momentumIsHigherMINMomentumSellInSignalIsTriggert == false) {
                lineText = TimeToString(TimeCurrent(), TIME_SECONDS) + " // " + DoubleToString(sellMomentum, 2);
-               createVLine("sellDynamic" + TimeToString(TimeCurrent()), time[i], clrRed, 1, STYLE_SOLID, lineText);
+               createVLine("sellDynamic" + TimeToString(TimeCurrent()), time[i], clrRed, 1, STYLE_DASH, lineText);
                createArrowSell("sellArrow" + __FUNCTION__ + TimeToString(TimeCurrent(), TIME_SECONDS));
                momentumIsHigherMINMomentumSellInSignalIsTriggert = true;
             }
